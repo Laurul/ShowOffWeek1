@@ -40,6 +40,10 @@ public class MoveObjects : MonoBehaviour
         {
             GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, -0.1f));
         }
+        if (transform.position.z < -8)
+        {
+            Destroy(this.gameObject);
+        }
       
     }
 }

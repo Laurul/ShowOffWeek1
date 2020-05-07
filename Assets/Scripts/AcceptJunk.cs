@@ -6,6 +6,7 @@ public class AcceptJunk : MonoBehaviour
 {
     [SerializeField] string _tag;
     int count = 0;
+    bool collected = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +20,31 @@ public class AcceptJunk : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       if( other.tag == _tag)
+        collected = false;
+        if ( other.tag == _tag)
         {
+            collected = true;
             count++;
+           
             Destroy(other.gameObject);
         }
-     
+        
     }
     public int returnCount()
     {
         return count;
+    }
+    public bool returnCollected()
+    {
+        return collected;
+
+    }
+    public void SwitchCollected()
+    {
+        collected = !collected;
+    }
+    public void RecycleJunk(int amount)
+    {
+        count-= amount;
     }
 }
