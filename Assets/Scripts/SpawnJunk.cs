@@ -7,24 +7,30 @@ public class SpawnJunk : MonoBehaviour
     [SerializeField] float countDown = 1.0f;
     [SerializeField] List<GameObject> spaceJunk;
     [SerializeField] GameObject rocketContainer;
-   
-    float timer;
+    [SerializeField] GameObject sonar;
+    
+    
     private void Start()
     {
-        timer = countDown;
+        
     }
 
     private void Update()
     {
-        countDown -= Time.deltaTime;
-        if (countDown <= 0.0f)
+        
+        if (sonar.gameObject.transform.GetComponent<Sonar>().canSpawn == true)
         {
             int index = Random.Range(0, 3);
             
-                Instantiate(spaceJunk[index], new Vector3(Random.Range(-4, 4), rocketContainer.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
+                Instantiate(spaceJunk[index], new Vector3(gameObject.transform.position.x, rocketContainer.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
 
-            countDown = timer;
+            
+
+
         }
-    
+       
+
+        }
+
     }
-}
+
