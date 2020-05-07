@@ -21,7 +21,7 @@ public class SpawnJunk : MonoBehaviour
         {
             int index = Random.Range(0, 3);
             
-                Instantiate(spaceJunk[index], new Vector3(Random.Range(-4, 4), rocketContainer.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
+                Instantiate(spaceJunk[index], new Vector3(rocketContainer.transform.position.x, rocketContainer.transform.position.y, gameObject.transform.position.z), gameObject.transform.localRotation);
 
             countDown = timer;
         }
