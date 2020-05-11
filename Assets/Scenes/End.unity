@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45646a08e8c424845b8b6f4d15e363ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passScore: 32
+  passScore: 0
   star1: {fileID: 1557606553}
   star2: {fileID: 259390702}
   star3: {fileID: 634914711}
