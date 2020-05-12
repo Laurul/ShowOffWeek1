@@ -20,9 +20,12 @@ public class MoveObjectsForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      //  if(Lean.Touch.LeanTouch.Fingers[0]!=null)
-      // print( Lean.Touch.LeanTouch.Fingers[0].ScreenPosition.x);
-       
+        //  if(Lean.Touch.LeanTouch.Fingers[0]!=null)
+        // print( Lean.Touch.LeanTouch.Fingers[0].ScreenPosition.x);
+        if (Lean.Touch.LeanTouch.Fingers.Count >0)
+        {
+            print(Lean.Touch.LeanTouch.Fingers[0].ScreenPosition);
+        }
 
         if (leanSelectable.IsSelected == true)
         {
