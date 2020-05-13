@@ -8,7 +8,7 @@ public class UpdateScore : MonoBehaviour
     [SerializeField] Text scoreText;
 
     [SerializeField] List<AcceptJunk> containers;
-    int score = 0;
+    public int score = 0;
     // Start is called before the first frame update
     void Start()
     {

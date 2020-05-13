@@ -7,7 +7,7 @@ public class EventHandler : MonoBehaviour
     [SerializeField] MoveTimerBar bar;
     [SerializeField] float timer = 0.3f;
     private float timerCopy;
-    float time = 1f;
+    public float time = 1f;
     int difficultyLvl = 0;
     [SerializeField] float difficultyTimer = 20.0f;
     float increasePerLevel= .0001f;
