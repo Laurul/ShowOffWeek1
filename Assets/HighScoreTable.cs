@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿//TO DO: LIST IS NO BIGGER THAN 10 ENTRIES. LIST
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,31 +18,33 @@ public class HighScoreTable : MonoBehaviour
         //highScoresEntries = new List<ScoreEntry>();
         //AddEntry(3213, "HAL9000");
 
-        string jsonString = PlayerPrefs.GetString("highscoreTable");
-        Highscores highscores =  JsonUtility.FromJson<Highscores>(jsonString);
+        //string jsonString = PlayerPrefs.GetString("highscoreTable");
+        //Highscores highscores =  JsonUtility.FromJson<Highscores>(jsonString);
 
-        for(int i = 0; i < highscores.highscoreEntries.Count; i++)
-        {
-            for (int j=i+1; j < highscores.highscoreEntries.Count; j++)
-            {
-                if (highscores.highscoreEntries[j].score > highscores.highscoreEntries[i].score)
-                {
-                    var aux = highscores.highscoreEntries[i];
-                    highscores.highscoreEntries[i] = highscores.highscoreEntries[j];
-                    highscores.highscoreEntries[j] = aux;
-                }
-            }
-        }
+        //for(int i = 0; i < highscores.highscoreEntries.Count; i++)
+        //{
+        //    for (int j=i+1; j < highscores.highscoreEntries.Count; j++)
+        //    {
+        //        if (highscores.highscoreEntries[j].score > highscores.highscoreEntries[i].score)
+        //        {
+        //            var aux = highscores.highscoreEntries[i];
+        //            highscores.highscoreEntries[i] = highscores.highscoreEntries[j];
+        //            highscores.highscoreEntries[j] = aux;
+        //        }
+        //    }
+        //}
 
-      
-        foreach(ScoreEntry highscoreEntry in highscores.highscoreEntries)
-        {
-            CreateHighScoreEntry(highscoreEntry, entryContainer, highScoreTransformList);
-        }
+
+        //foreach(ScoreEntry highscoreEntry in highscores.highscoreEntries)
+        //{
+        //    CreateHighScoreEntry(highscoreEntry, entryContainer, highScoreTransformList);
+        //}
+
+        UpdateTable();
     }
 
 
-    private void AddEntry(int _score, string _name)
+    public void AddEntry(int _score, string _name)//use this when you want to add a new highscore to the list
     {
         //Create score entry
         ScoreEntry scoreEntry = new ScoreEntry { score = _score, name = _name };
@@ -59,7 +62,7 @@ public class HighScoreTable : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-
+    
 
     private void CreateHighScoreEntry(ScoreEntry hishcoreEntry, Transform container, List<Transform> transformLists)
     {
@@ -92,5 +95,38 @@ public class HighScoreTable : MonoBehaviour
 
         transformLists.Add(entry);
 
+    }
+
+
+    public void UpdateTable()
+    {
+        foreach(Transform t in highScoreTransformList)
+        {
+            
+            Destroy(t.gameObject);
+        }
+        highScoreTransformList.Clear();
+        
+        string jsonString = PlayerPrefs.GetString("highscoreTable");
+        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+
+        for (int i = 0; i < highscores.highscoreEntries.Count; i++)
+        {
+            for (int j = i + 1; j < highscores.highscoreEntries.Count; j++)
+            {
+                if (highscores.highscoreEntries[j].score > highscores.highscoreEntries[i].score)
+                {
+                    var aux = highscores.highscoreEntries[i];
+                    highscores.highscoreEntries[i] = highscores.highscoreEntries[j];
+                    highscores.highscoreEntries[j] = aux;
+                }
+            }
+        }
+
+
+        foreach (ScoreEntry highscoreEntry in highscores.highscoreEntries)
+        {
+            CreateHighScoreEntry(highscoreEntry, entryContainer, highScoreTransformList);
+        }
     }
 }

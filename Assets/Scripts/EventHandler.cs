@@ -28,9 +28,9 @@ public class EventHandler : MonoBehaviour
             difficultyTimer -= Time.deltaTime;
             if (difficultyTimer <= 0f)
             {
-                increasePerLevel *= 2;
+                increasePerLevel *=1.5f;
                 difficultyTimer = 20.0f;
-                amount *= 2;
+                amount *= 2.5f;
             }
 
             timer -= Time.deltaTime;

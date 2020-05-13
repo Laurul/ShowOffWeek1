@@ -22,6 +22,12 @@ public class DestroyObjectsOnClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (targetTime <= 0)
+        {
+            targetTime = 10.0f;
+            clickCounter = 0;
+            canStart = false;
+        }
         Debug.Log(targetTime);
         if (Input.GetMouseButtonDown(0))
         {
@@ -44,30 +50,32 @@ public class DestroyObjectsOnClick : MonoBehaviour
                 }
             }
         
-        void timerEnded()
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.transform.tag == "BigChunk")
-                    {
-                        audioData.Play(0);
-                        clickCounter++;
-                        if (clickCounter == 3)
-                        {
-                            clickCounter = 0;
-                            Destroy(hit.transform.gameObject);
-                            targetTime = 60f;
-                            canStart = false;
+        
+    }
 
-                        }
+    void timerEnded()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.tag == "BigChunk")
+                {
+                    audioData.Play(0);
+                    clickCounter++;
+                    if (clickCounter == 3)
+                    {
+                        clickCounter = 0;
+                        Destroy(hit.transform.gameObject);
+                        targetTime = 60f;
+                        canStart = false;
+
                     }
                 }
             }
-
         }
+
     }
 }

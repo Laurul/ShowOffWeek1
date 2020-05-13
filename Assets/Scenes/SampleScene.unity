@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf8c92098a7a264d8c29c15d093f8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTime: 60
+  targetTime: 3
   clickCounter: 0
 --- !u!114 &1293585059 stripped
 MonoBehaviour:

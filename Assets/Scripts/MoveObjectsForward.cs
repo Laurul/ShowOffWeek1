@@ -31,7 +31,7 @@ public class MoveObjectsForward : MonoBehaviour
         {
             moving=false;
             Vector3 mouse = Input.mousePosition;
-            Ray castPoint = Camera.main.ScreenPointToRay(mouse);
+            Ray castPoint = Camera.main.ScreenPointToRay(new Vector3(Lean.Touch.LeanTouch.Fingers[0].ScreenPosition.x, Lean.Touch.LeanTouch.Fingers[0].ScreenPosition.y,0));
             RaycastHit hit;
             if (Physics.Raycast(castPoint, out hit, Mathf.Infinity))
             {
