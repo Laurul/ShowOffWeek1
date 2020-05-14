@@ -17,7 +17,7 @@ public class EndScreenCondition : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {if (fuelLeft.transform.gameObject.GetComponent<EventHandler>().time < 0.01f || oxygenLeft.transform.gameObject.GetComponent<EventHandler>().time < 0.01f)
+    {if (fuelLeft.transform.gameObject.GetComponent<EventHandler>().barMeter < 0.01f || oxygenLeft.transform.gameObject.GetComponent<EventHandler>().barMeter < 0.01f)
         {
             SceneManager.LoadScene("End");
             scoreEnd = scoreObject.transform.gameObject.GetComponent<UpdateScore>().score;

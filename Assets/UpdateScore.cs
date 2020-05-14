@@ -32,4 +32,8 @@ public class UpdateScore : MonoBehaviour
         }
         scoreText.text = "Score: " + score;
     }
+    public void AddScore(int value)
+    {
+        score += value;
+    }
 }

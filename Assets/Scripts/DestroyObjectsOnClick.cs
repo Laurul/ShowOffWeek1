@@ -5,7 +5,12 @@ using UnityEngine;
 public class DestroyObjectsOnClick : MonoBehaviour
 {
    [SerializeField] private float targetTime = 60.0f;
-   [SerializeField] private int clickCounter=0;
+    private int clickCounter=0;
+    [SerializeField] private int numberOfClicksNeeded = 3;
+    [SerializeField] int scoreToAdd = 1000;
+    private UpdateScore scoreUpdate;
+    private GameObject scoreManager;
+  //  [SerializeField] Camera cam;
     private bool canStart = false;
     AudioSource audioData;
     
@@ -16,7 +21,8 @@ public class DestroyObjectsOnClick : MonoBehaviour
     void Start()
     {
         audioData = GetComponent<AudioSource>();
-       
+        scoreManager = GameObject.Find("ScoreManager");
+        scoreUpdate = scoreManager.GetComponent<UpdateScore>();
     }
 
     // Update is called once per frame
@@ -31,7 +37,7 @@ public class DestroyObjectsOnClick : MonoBehaviour
         Debug.Log(targetTime);
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.transform.tag == "BigChunk")
@@ -57,7 +63,7 @@ public class DestroyObjectsOnClick : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
@@ -65,8 +71,9 @@ public class DestroyObjectsOnClick : MonoBehaviour
                 {
                     audioData.Play(0);
                     clickCounter++;
-                    if (clickCounter == 3)
+                    if (clickCounter >= numberOfClicksNeeded)
                     {
+                        scoreUpdate.AddScore(scoreToAdd);
                         clickCounter = 0;
                         Destroy(hit.transform.gameObject);
                         targetTime = 60f;

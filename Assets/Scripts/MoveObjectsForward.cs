@@ -36,7 +36,7 @@ public class MoveObjectsForward : MonoBehaviour
             if (Physics.Raycast(castPoint, out hit, Mathf.Infinity))
             {
                 if (hit.transform.tag == "water" || hit.transform.tag == "biomass" || hit.transform.tag == "metal")
-                    hit.transform.position = Vector3.MoveTowards(transform.position,hit.point,Time.deltaTime*4);// new Vector3( hit.point.x,hit.point.y,-1);
+                    hit.transform.position = Vector3.MoveTowards(transform.position,hit.point,Time.deltaTime*20);// new Vector3( hit.point.x,hit.point.y,-1);
                 if (hit.transform.position.z <= 0)
                 {
                     hit.transform.position = new Vector3(hit.transform.position.x, hit.transform.position.y, 0);

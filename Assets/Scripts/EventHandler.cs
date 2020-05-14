@@ -5,17 +5,18 @@ using UnityEngine;
 public class EventHandler : MonoBehaviour
 {
     [SerializeField] MoveTimerBar bar;
-    [SerializeField] float timer = 0.3f;
-    private float timerCopy;
-    public float time = 1f;
-    int difficultyLvl = 0;
     [SerializeField] float difficultyTimer = 20.0f;
-    float increasePerLevel= .0001f;
+    [SerializeField] float spawnTimer = 0.3f;
+    private float timerCopy;
+    public float barMeter = 1f;
+    int difficultyLvl = 0;
+   
+    float increasePerLevel= .00001f;
     float amount = 0.02f;
     // Start is called before the first frame update
     void Start()
     {
-        timerCopy = timer;
+        timerCopy = spawnTimer;
     }
 
     // Update is called once per frame
@@ -30,18 +31,18 @@ public class EventHandler : MonoBehaviour
             {
                 increasePerLevel *=1.5f;
                 difficultyTimer = 20.0f;
-                amount *= 2.5f;
+                amount *= 1.1f;
             }
 
-            timer -= Time.deltaTime;
-            if (timer > .01f)
+            spawnTimer -= Time.deltaTime;
+            if (spawnTimer > .01f)
             {
-                time -= increasePerLevel;
-                bar.SetSize(time);
+                barMeter -= increasePerLevel;
+                bar.SetSize(barMeter);
             }
             else
             {
-                timer = timerCopy;
+                spawnTimer = timerCopy;
             }
         }
        
@@ -49,7 +50,7 @@ public class EventHandler : MonoBehaviour
 
     public void TriggerLvlUP()
     {
-        time += amount;
-        bar.SetSize(time);
+        barMeter += amount;
+        bar.SetSize(barMeter);
     }
 }
