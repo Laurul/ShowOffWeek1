@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnergyBar : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class EnergyBar : MonoBehaviour
     [SerializeField] float spawnTimer = 0.3f;
     float increasePerLevel = .0001f;
     [SerializeField] private float ennergyAddAmmount = 100;
+    [SerializeField] private GameObject submarineObject;
+    [SerializeField] private Slider speedSlider;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,10 @@ public class EnergyBar : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {if (bateryContainer.gameObject.transform.GetComponent<BateryAccept>().counter>0)
+    {
+        increasePerLevel =.0001f*submarineObject.transform.GetComponent<WaypointSystem>().moveSpeed;
+
+        if (bateryContainer.gameObject.transform.GetComponent<BateryAccept>().counter>0)
         {
             if (barMeter + ennergyAddAmmount * increasePerLevel > 1f)
             {
