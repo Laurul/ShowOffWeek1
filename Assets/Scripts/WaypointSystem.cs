@@ -9,6 +9,7 @@ public class WaypointSystem : MonoBehaviour
     [SerializeField] public float moveSpeed = 0f;
     [SerializeField] private Slider speedSlider;
     private int waypointIndex=0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,12 @@ public class WaypointSystem : MonoBehaviour
     void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime); ;
-        if(transform.position == waypoints[waypointIndex].transform.position)
-        { waypointIndex += 1;
-            if (waypointIndex != waypoints.Length)
-                this.transform.localRotation = waypoints[waypointIndex].transform.localRotation;
+        if (transform.position == waypoints[waypointIndex].transform.position)
+        {
+            waypointIndex += 1;
+            this.transform.localRotation = waypoints[waypointIndex].transform.localRotation;
+           
+             
         }
     }
 }
