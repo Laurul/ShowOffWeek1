@@ -6,6 +6,7 @@ using Lean;
 public class BateryBehaviour : MonoBehaviour
 {
     [SerializeField] Lean.Touch.LeanSelectable leanSelectable;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,8 @@ public class BateryBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        this.transform.rotation = GameObject.FindWithTag("Submarine").transform.rotation;
+        
         if (leanSelectable.IsSelected == true)
         {
             this.transform.GetComponent<Rigidbody>().isKinematic = true;

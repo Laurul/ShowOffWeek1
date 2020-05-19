@@ -29,7 +29,8 @@ public class WaypointSystem : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime); ;
         if(transform.position == waypoints[waypointIndex].transform.position)
         { waypointIndex += 1;
-            this.transform.localRotation = waypoints[waypointIndex].transform.localRotation;
+            if (waypointIndex != waypoints.Length)
+                this.transform.localRotation = waypoints[waypointIndex].transform.localRotation;
         }
     }
 }

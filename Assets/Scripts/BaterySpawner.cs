@@ -18,10 +18,11 @@ public class BaterySpawner : MonoBehaviour
         countDown -= Time.deltaTime;
         if (countDown <= 0f)
         {
-            GameObject bateryClone =Instantiate(objectToSpwan, new Vector3(this.transform.position.x+ Random.Range(-8f, 8f), this.transform.position.y, this.transform.position.z), Quaternion.identity) as GameObject;
+            GameObject bateryClone =Instantiate(objectToSpwan, new Vector3(this.transform.position.x+ Random.Range(-1f, 1f), this.transform.position.y, this.transform.position.z), this.transform.rotation) as GameObject;
             Destroy(bateryClone,70f);
             Rigidbody rb = bateryClone.GetComponent<Rigidbody>();
             rb.AddForce(-transform.up*6);
+            bateryClone.transform.parent = transform;
             countDown = 3.0f;
         }
     }

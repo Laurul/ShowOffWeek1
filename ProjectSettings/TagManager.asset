@@ -10,6 +10,7 @@ TagManager:
   - BigChunk
   - ScoreGlobal
   - batery
+  - Submarine
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - 
   - IgnoreAlex
-  - 
+  - Submarine
   - 
   - 
   - 
