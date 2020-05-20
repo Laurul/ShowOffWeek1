@@ -14,7 +14,7 @@ public class StarManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {scoreObject = GameObject.FindGameObjectWithTag("ScoreGlobal");
-        passScore = scoreObject.transform.gameObject.GetComponent<EndScreenCondition>().scoreEnd;
+        passScore = scoreObject.transform.gameObject.GetComponent<EndCondition>().scoreEnd;
         star1.gameObject.SetActive(false);
         star2.gameObject.SetActive(false);
         star3.gameObject.SetActive(false);

@@ -20,12 +20,20 @@ public class entry : MonoBehaviour
        if(sc.name==null)
         sc.name = FindObjectOfType<InputField>().text;
     }
+
     public void UpdateScore()
     {
-        int _score = int.Parse(FindObjectOfType<InputField>().text);
+        int _score = FindObjectOfType<EndCondition>().scoreEnd;
         sc.score = _score;
     }
 
+    public void UpdateScore(int _score)
+    {
+        sc.score = _score;
+    }
 
-
+    private void Update()
+    {
+        Debug.Log("Score is:" + sc.score);
+    }
 }
