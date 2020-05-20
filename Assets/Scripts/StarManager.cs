@@ -5,7 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class StarManager : MonoBehaviour
 {
-    [SerializeField] private int passScore;
+    [SerializeField] public int passScore;
     [SerializeField] private GameObject star1;
     [SerializeField] private GameObject star2;
     [SerializeField] private GameObject star3;
