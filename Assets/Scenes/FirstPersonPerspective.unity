@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSpwan: {fileID: 5670026913400627541, guid: d3b5ce51bdeff504c80dcdfcdaa035ea,
     type: 3}
-  countDown: 3
+  countDown: 5
 --- !u!65 &1153857104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1233,6 +1233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain
       objectReference: {fileID: 0}
+    - target: {fileID: 7629739077237507434, guid: cc57dbb4b8e88044182d77d53ee32fb1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc57dbb4b8e88044182d77d53ee32fb1, type: 3}
 --- !u!1 &1228281372
@@ -1328,7 +1333,7 @@ MonoBehaviour:
   MaxSelectables: 0
   Search: 1
   Reselect: 3
-  AutoDeselect: 0
+  AutoDeselect: 1
   MaxScreenDistance: 50
 --- !u!1 &1268795517
 GameObject:

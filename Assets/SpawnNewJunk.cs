@@ -24,7 +24,7 @@ public class SpawnNewJunk : MonoBehaviour
         specialEventCountdown -= Time.deltaTime;
         if (specialEventCountdown <= 0f)
         {
-            Instantiate(specialEvent, new Vector3(Random.Range(-8, 8), Random.Range(-3, 6), anchor.transform.position.z), Quaternion.identity);
+            Instantiate(specialEvent, new Vector3(anchor.transform.position.x, anchor.transform.position.y, anchor.transform.position.z), Quaternion.identity);
             specialEventCountdown = aux;
         }
        
@@ -32,8 +32,8 @@ public class SpawnNewJunk : MonoBehaviour
         if (timer <= 0.0f)
         {
             int index = Random.Range(0, 3);
-            Debug.Log(index);
-            Instantiate(junkTypes[index], new Vector3(Random.Range(-8, 8), Random.Range(-3, 6), anchor.transform.position.z), Quaternion.identity);
+           // Debug.Log(index);
+            Instantiate(junkTypes[index], new Vector3(anchor.transform.position.x, anchor.transform.position.y, anchor.transform.position.z), Quaternion.identity);
             timer = countDown;
         }
     }

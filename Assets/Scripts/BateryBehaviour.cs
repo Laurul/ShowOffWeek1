@@ -24,10 +24,11 @@ public class BateryBehaviour : MonoBehaviour
 
         }
         else
-        {if (this.transform.GetComponent<Rigidbody>().velocity.magnitude < 0.01f)
-             this.transform.GetComponent<Rigidbody>().AddForce(-transform.up*6);
+        {
+            if (this.transform.GetComponent<Rigidbody>().velocity.magnitude < 0.01f)
+                this.transform.GetComponent<Rigidbody>().AddForce(-transform.up * 6);
             this.transform.GetComponent<Rigidbody>().isKinematic = false;
-            
+
         }
 
 
