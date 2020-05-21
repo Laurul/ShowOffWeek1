@@ -16,7 +16,7 @@ public class BateryAccept : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textObject.GetComponent<UnityEngine.UI.Text>().text = counter.ToString();
+       
 
     }
     void OnTriggerEnter(Collider collision)
