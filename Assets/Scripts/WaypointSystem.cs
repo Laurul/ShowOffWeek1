@@ -9,12 +9,17 @@ public class WaypointSystem : MonoBehaviour
     [SerializeField] public float moveSpeed = 0f;
     [SerializeField] private Slider speedSlider;
     private int waypointIndex=0;
-    
+    Quaternion rotTarget;
     // Start is called before the first frame update
     void Start()
     {
         transform.position = waypoints[waypointIndex].transform.position;
         moveSpeed = speedSlider.GetComponent<Slider>().value;
+       for(int counter=0; counter < waypoints.Length-1; counter++)
+        {
+            Debug.Log("PULAAA");
+            waypoints[counter].transform.LookAt(waypoints[counter+1].transform);
+        }
     }
 
     // Update is called once per frame
@@ -31,9 +36,10 @@ public class WaypointSystem : MonoBehaviour
         if (transform.position == waypoints[waypointIndex].transform.position)
         {
             waypointIndex += 1;
-            this.transform.localRotation = waypoints[waypointIndex].transform.localRotation;
+            this.transform.LookAt(waypoints[waypointIndex].transform);
            
              
         }
     }
+    
 }

@@ -20,6 +20,7 @@ public class UpdateScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       if(refference!=null)
         refference.UpdateScore(score);
         int toAdd = 0;
         
