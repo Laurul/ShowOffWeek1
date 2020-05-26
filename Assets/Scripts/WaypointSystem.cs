@@ -36,6 +36,7 @@ public class WaypointSystem : MonoBehaviour
         if (transform.position == waypoints[waypointIndex].transform.position)
         {
             waypointIndex += 1;
+       
             this.transform.LookAt(waypoints[waypointIndex].transform);
            
              
