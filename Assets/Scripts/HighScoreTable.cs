@@ -15,8 +15,20 @@ public class HighScoreTable : MonoBehaviour
     {
         highScoreTransformList = new List<Transform>();
         entryTemplate.gameObject.SetActive(false);
+
+
+        string jsonString = PlayerPrefs.GetString("highscoreTable");
+
+        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+        if (highscores == null)
+        {
+            print(" null");
+            string json = JsonUtility.ToJson(new Highscores());
+            PlayerPrefs.SetString("highscoreTable", json);
+            PlayerPrefs.Save();
+        }
         //highScoresEntries = new List<ScoreEntry>();
-       // AddEntry(3213, "HAL9000");
+        // AddEntry(3213, "HAL9000");
 
         //string jsonString = PlayerPrefs.GetString("highscoreTable");
         //Highscores highscores =  JsonUtility.FromJson<Highscores>(jsonString);
@@ -59,17 +71,17 @@ public class HighScoreTable : MonoBehaviour
 
         //Save updated score table
         string json = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("highscoreTable",json);
+        PlayerPrefs.SetString("highscoreTable", json);
         PlayerPrefs.Save();
     }
 
-    
+
 
     private void CreateHighScoreEntry(ScoreEntry hishcoreEntry, Transform container, List<Transform> transformLists)
     {
         Transform entry = Instantiate(entryTemplate, container);
         RectTransform entryRect = entry.GetComponent<RectTransform>();
-        
+
         entryRect.anchoredPosition = new Vector2(0, transformLists.Count * -offset);
         entry.gameObject.SetActive(true);
 
@@ -124,29 +136,48 @@ public class HighScoreTable : MonoBehaviour
                     }
                 }
             }
-            foreach (ScoreEntry highscoreEntry in highscores.highscoreEntries)
+
+            if (highscores.highscoreEntries.Count >= 10)
             {
-                CreateHighScoreEntry(highscoreEntry, entryContainer, highScoreTransformList);
+                for (int i = 0; i < 10; i++)
+                {
+                    CreateHighScoreEntry(highscores.highscoreEntries[i], entryContainer, highScoreTransformList);
+                }
             }
+            else
+            {
+                foreach (ScoreEntry highscoreEntry in highscores.highscoreEntries)
+                {
+                    CreateHighScoreEntry(highscoreEntry, entryContainer, highScoreTransformList);
+                }
+            }
+                
         }
 
 
 
-        
+
     }
 
-    private void Update()
-    {
-        string jsonString = PlayerPrefs.GetString("highscoreTable");
+    //private void Update()
+    //{
+    //    string jsonString = PlayerPrefs.GetString("highscoreTable");
 
-        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-        if (highscores == null)
-        {
-            print(" null");
-            string json = JsonUtility.ToJson(new Highscores());
-            PlayerPrefs.SetString("highscoreTable", json);
-            PlayerPrefs.Save();
-        }
-        else print("json not null");
-    }
+    //    Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+    //    if (highscores == null)
+    //    {
+    //        print(" null");
+    //        string json = JsonUtility.ToJson(new Highscores());
+    //        PlayerPrefs.SetString("highscoreTable", json);
+    //        PlayerPrefs.Save();
+    //    }
+    //    else print("json not null");
+
+    //    if (Input.GetKeyDown(KeyCode.C))
+    //    {
+    //        string json = JsonUtility.ToJson(new Highscores());
+    //        PlayerPrefs.SetString("highscoreTable", json);
+    //        PlayerPrefs.Save();
+    //    }
+    //}
 }

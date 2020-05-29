@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
@@ -8,6 +9,7 @@ public class LoadScene : MonoBehaviour
     private void Awake()
     {
         score = FindObjectOfType<entry>();
+        GetComponent<Button>().onClick.AddListener(LoadMainScene);
     }
     public void LoadCustomScene()
     {
@@ -25,4 +27,9 @@ public class LoadScene : MonoBehaviour
         score.UpdateName();
     }
 
+    public void LoadMainScene()
+    {
+        gameObject.SetActive(false);
+        FindObjectOfType<ProgressScreenLoader>().LoadScene(sceneToLoad);
+    }
 }
