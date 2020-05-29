@@ -1,0 +1,16 @@
+{
+"companyName": "LastBreath",
+"productName": "PrototypeW4",
+"productVersion": "0.1",
+"dataUrl": "Week4Proto.data.unityweb",
+"wasmCodeUrl": "Week4Proto.wasm.code.unityweb",
+"wasmFrameworkUrl": "Week4Proto.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.13f1"
+}
