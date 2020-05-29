@@ -25,18 +25,18 @@ public class EnergyBar : MonoBehaviour
     {
         increasePerLevel =.0001f*submarineObject.transform.GetComponent<WaypointSystem>().moveSpeed;
 
-        if (bateryContainer.gameObject.transform.GetComponent<AcceptJunk>().returnCount()>0)
+        if (bateryContainer.gameObject.transform.GetComponent<BateryAccept>().counter>0)
         {
             if (barMeter + ennergyAddAmmount * increasePerLevel > 1f)
             {
                 barMeter += 1f - barMeter;
-                bateryContainer.gameObject.transform.GetComponent<AcceptJunk>().RecycleJunk(1);
+                bateryContainer.gameObject.transform.GetComponent<BateryAccept>().counter--;
                 bar.SetSize(barMeter);
             }
             else
             {
                 barMeter += ennergyAddAmmount * increasePerLevel;
-                bateryContainer.gameObject.transform.GetComponent<AcceptJunk>().RecycleJunk(1);
+                bateryContainer.gameObject.transform.GetComponent<BateryAccept>().counter--;
                 bar.SetSize(barMeter);
             }
             
