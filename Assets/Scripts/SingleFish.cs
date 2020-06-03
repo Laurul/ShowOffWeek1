@@ -22,6 +22,24 @@ public class SingleFish : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Submarine"))
+            Spawn();
+    }
+    private void Spawn()
+    {
+        
         allFish = new GameObject[numFish];
         for (int i = 0; i < numFish; i++)
         {
@@ -31,12 +49,7 @@ public class SingleFish : MonoBehaviour
             allFish[i] = (GameObject)Instantiate(fishPrefab, pos, Quaternion.identity);
             allFish[i].GetComponent<FishBehaviour>().myManager = this;
         }
-
     }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
