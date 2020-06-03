@@ -27944,7 +27944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1572333950
 Transform:
   m_ObjectHideFlags: 0
@@ -31925,7 +31925,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: e13369043940447cab57a61b2bb628c9, type: 2}
+  sharedProfile: {fileID: 0}
 --- !u!4 &1973617649
 Transform:
   m_ObjectHideFlags: 0
