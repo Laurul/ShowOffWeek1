@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: StingrayPBS2
+  m_Shader: {fileID: -6465566751694194690, guid: a389ff2e185f8154a8b6591fccc3e91a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_26A99950:
+        m_Texture: {fileID: 2800000, guid: 5a5c74f07b3ebf24ea0002adfb0248b7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_4AAE71FC:
+        m_Texture: {fileID: 2800000, guid: 441b02d1e414618438167fe667d01c5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_5982D32B:
+        m_Texture: {fileID: 2800000, guid: 3f920215ca5b84d4dacf7e79c36fcca6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_CDFE3187:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_DD979FE3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 3f920215ca5b84d4dacf7e79c36fcca6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 203842ce046ee29469554490f0c698ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: 441b02d1e414618438167fe667d01c5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_C3AA83B: 0
+    - Vector1_205AF82D: 29.4
+    - Vector1_32912814: 0
+    - Vector1_5637C4A0: 0.588
+    - Vector1_8A9CE5B8: 0
+    - Vector1_B6B9D997: 0.503
+    - _Glossiness: 0.05411448
+    - _Metallic: 0
+    - _UseAoMap: 1
+    - _UseColorMap: 0
+    - _UseEmissiveMap: 0
+    - _UseMetallicMap: 0
+    - _UseNormalMap: 1
+    - _UseRoughnessMap: 1
+    m_Colors:
+    - Color_365C81D5: {r: 1, g: 1, b: 1, a: 0}
+    - Color_4F6EB8EE: {r: 1, g: 1, b: 1, a: 0}
+    - Color_5233F0CB: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 0}
+    - Color_88E4A71D: {r: 0.509434, g: 0.509434, b: 0.509434, a: 0}
+    - Color_BCD52F67: {r: 0.8490566, g: 0.6688323, b: 0.69600356, a: 0}
+    - _Color: {r: 0.55833495, g: 0.42868495, b: 0.59062004, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
