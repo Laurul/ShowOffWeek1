@@ -35,7 +35,10 @@ public class SingleFish : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Submarine"))
+        {
             Spawn();
+            Destroy(this.gameObject,10f);
+        }
     }
     private void Spawn()
     {
@@ -46,7 +49,7 @@ public class SingleFish : MonoBehaviour
             Vector3 pos = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
                                                                   Random.Range(-swimLimits.y, swimLimits.y),
                                                                   Random.Range(-swimLimits.z, swimLimits.z));
-            allFish[i] = (GameObject)Instantiate(fishPrefab, pos, Quaternion.identity);
+            allFish[i] = (GameObject)Instantiate(fishPrefab, pos, Quaternion.identity,this.transform);
             allFish[i].GetComponent<FishBehaviour>().myManager = this;
         }
     }
