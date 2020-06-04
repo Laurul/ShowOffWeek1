@@ -22,15 +22,7 @@ public class SingleFish : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        allFish = new GameObject[numFish];
-        for (int i = 0; i < numFish; i++)
-        {
-            Vector3 pos = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
-                                                                  Random.Range(-swimLimits.y, swimLimits.y),
-                                                                  Random.Range(-swimLimits.z, swimLimits.z));
-            allFish[i] = (GameObject)Instantiate(fishPrefab, pos, Quaternion.identity);
-            allFish[i].GetComponent<FishBehaviour>().myManager = this;
-        }
+        
 
     }
 
@@ -39,4 +31,28 @@ public class SingleFish : MonoBehaviour
     {
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Submarine"))
+        {
+            Spawn();
+            Destroy(this.gameObject,10f);
+        }
+    }
+    private void Spawn()
+    {
+        
+        allFish = new GameObject[numFish];
+        for (int i = 0; i < numFish; i++)
+        {
+            Vector3 pos = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
+                                                                  Random.Range(-swimLimits.y, swimLimits.y),
+                                                                  Random.Range(-swimLimits.z, swimLimits.z));
+            allFish[i] = (GameObject)Instantiate(fishPrefab, pos, Quaternion.identity,this.transform);
+            allFish[i].GetComponent<FishBehaviour>().myManager = this;
+        }
+    }
+    
+
 }

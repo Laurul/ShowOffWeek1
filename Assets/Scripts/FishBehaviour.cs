@@ -7,21 +7,23 @@ public class FishBehaviour : MonoBehaviour
 
     public SingleFish myManager;
     float speed;
-
+    private GameObject player;
+   
     // Use this for initialization
     void Start()
     {
         speed = Random.Range(myManager.minSpeed,
                                 myManager.maxSpeed);
-
+        player = GameObject.FindWithTag("Submarine");
+        
     }
-
+   
     // Update is called once per frame
     void Update()
     {
         transform.Translate(0, 0, Time.deltaTime * speed);
         ApplyRules();
-
+        this.transform.rotation = player.transform.rotation;
     }
     void ApplyRules()
     {
