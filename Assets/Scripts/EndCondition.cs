@@ -18,9 +18,9 @@ public class EndCondition : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {if(en!=null)
+    {
         en.UpdateScore();
-        if (fuelLeft != null||scoreObject!=null)
+        if (fuelLeft != null)
         {
             if (fuelLeft.transform.gameObject.GetComponent<EnergyBar>().barMeter < 0.01f)
             {
