@@ -7,22 +7,23 @@ public class UpdateScore : MonoBehaviour
 {
     [SerializeField] Text scoreText;
     entry refference;
-   
+
     [SerializeField] List<AcceptJunk> containers;
     public int score = 0;
     // Start is called before the first frame update
     void Awake()
     {
         refference = FindObjectOfType<entry>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        refference.UpdateScore(score);
+        if (refference != null)
+            refference.UpdateScore(score);
         int toAdd = 0;
-        
+
         foreach (AcceptJunk container in containers)
         {
             if (container.returnCollected() == true)
@@ -30,9 +31,9 @@ public class UpdateScore : MonoBehaviour
                 container.SwitchCollected();
                 toAdd += 100;
                 score += toAdd;
-                
+
             }
-            
+
         }
         scoreText.text = "Score: " + score;
     }

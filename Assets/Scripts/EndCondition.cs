@@ -28,7 +28,7 @@ public class EndCondition : MonoBehaviour
                 scoreEnd = scoreObject.transform.gameObject.GetComponent<UpdateScore>().score;
             }
         }
-       
+
 
     }
 }

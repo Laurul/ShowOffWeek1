@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnergyBar : MonoBehaviour
+public class EBar : MonoBehaviour
 {
     [SerializeField] MoveTimerBar bar;
-    [SerializeField] private GameObject bateryContainer;
+    [SerializeField]  GameObject bateryContainer;
     public float barMeter = 1f;
     private float timerCopy;
     [SerializeField] float spawnTimer = 0.3f;
@@ -25,18 +25,20 @@ public class EnergyBar : MonoBehaviour
     {
         increasePerLevel = .0001f * submarineObject.transform.GetComponent<WaypointSystem>().moveSpeed;
 
-        if (bateryContainer.gameObject.transform.GetComponent<AcceptJunk>().returnCount() > 0)
+       
+
+        if (bateryContainer.gameObject.transform.GetComponent<BateryAccept>().counter > 0)
         {
             if (barMeter + ennergyAddAmmount * increasePerLevel > 1f)
             {
                 barMeter += 1f - barMeter;
-                bateryContainer.gameObject.transform.GetComponent<AcceptJunk>().RecycleJunk(1);
+                bateryContainer.gameObject.transform.GetComponent<BateryAccept>().counter--;
                 bar.SetSize(barMeter);
             }
             else
             {
                 barMeter += ennergyAddAmmount * increasePerLevel;
-                bateryContainer.gameObject.transform.GetComponent<AcceptJunk>().RecycleJunk(1);
+                bateryContainer.gameObject.transform.GetComponent<BateryAccept>().counter--;
                 bar.SetSize(barMeter);
             }
 
@@ -57,3 +59,4 @@ public class EnergyBar : MonoBehaviour
         }
     }
 }
+
