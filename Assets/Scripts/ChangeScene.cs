@@ -23,4 +23,9 @@ public class ChangeScene : MonoBehaviour
     {
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag=="boundry")
+        SceneManager.LoadScene(4);
+    }
 }

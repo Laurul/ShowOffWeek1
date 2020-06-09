@@ -24,7 +24,8 @@ public class EndCondition : MonoBehaviour
         {
             if (fuelLeft.transform.gameObject.GetComponent<EnergyBar>().barMeter < 0.01f)
             {
-                SceneManager.LoadScene("End");
+               // SceneManager.LoadScene("End");
+                SceneManager.LoadScene("HighScorePrototype");
                 scoreEnd = scoreObject.transform.gameObject.GetComponent<UpdateScore>().score;
             }
         }

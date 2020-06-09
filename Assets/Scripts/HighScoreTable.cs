@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HighScoreTable : MonoBehaviour
 {
@@ -102,9 +103,13 @@ public class HighScoreTable : MonoBehaviour
         string name = hishcoreEntry.name;
 
 
-        entry.GetChild(0).GetComponent<Text>().text = rankString;
-        entry.GetChild(1).GetComponent<Text>().text = score.ToString();
-        entry.GetChild(2).GetComponent<Text>().text = name;
+        entry.GetChild(0).GetComponent<TextMeshProUGUI>().text = null;
+        entry.GetChild(1).GetComponent<TextMeshProUGUI>().text = name; 
+        entry.GetChild(2).GetComponent<TextMeshProUGUI>().text = score.ToString(); 
+
+        //entry.GetChild(0).GetComponent<Text>().text = rankString;
+        //entry.GetChild(1).GetComponent<Text>().text = name; 
+        //entry.GetChild(2).GetComponent<Text>().text = score.ToString();
 
         transformLists.Add(entry);
 
