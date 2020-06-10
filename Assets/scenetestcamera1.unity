@@ -391,7 +391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1622549606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,6 +609,7 @@ GameObject:
   - component: {fileID: 2041624796}
   - component: {fileID: 2041624795}
   - component: {fileID: 2041624794}
+  - component: {fileID: 2041624797}
   m_Layer: 0
   m_Name: Light Projector
   m_TagString: Untagged
@@ -675,3 +676,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2041624797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041624793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedb2ba1a582a1e4f81a6a9b8fe932b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  causticFrames:
+  - {fileID: 2800000, guid: de87be07821c5f947965cabb37e2744f, type: 3}
+  - {fileID: 2800000, guid: 8170918eefd79174f87fd86e22737494, type: 3}
+  - {fileID: 2800000, guid: 1eb712f52fc64b1448730eccfd2a2e0c, type: 3}
+  - {fileID: 2800000, guid: c2cf20870e3241a4a93aef2eb939ebd0, type: 3}
+  - {fileID: 2800000, guid: ac18af172178bf04db5b2930f2b20cf1, type: 3}
+  - {fileID: 2800000, guid: 6fb9957c3b2f5214390762fcd7a7d8c4, type: 3}
+  - {fileID: 2800000, guid: 8270f9fa4ec119b48bd0d8f5f80ff313, type: 3}
+  - {fileID: 2800000, guid: 2fd1023a41391784f8878716d13829cf, type: 3}
+  - {fileID: 2800000, guid: bcb50e589d0e8244c83059dd69116f30, type: 3}
+  - {fileID: 2800000, guid: 4073e9d07c7245d4c88c15bc6f1b3821, type: 3}
+  - {fileID: 2800000, guid: 4f77ef5f15188e443915052e16eb7dc9, type: 3}
+  - {fileID: 2800000, guid: b5d21495a2d9c184abcf35cc269d1d2d, type: 3}
+  - {fileID: 2800000, guid: 15a6a7b766b32ee4d90a0c7e6f80199f, type: 3}
+  - {fileID: 2800000, guid: 39c466fe09cf15f46be165e4e20fa2ae, type: 3}
+  - {fileID: 2800000, guid: 9848685f9ce03e84283099f5ebc615bf, type: 3}
+  - {fileID: 2800000, guid: 13a00b6ec9f328149b129bf9427d5f7b, type: 3}
+  fps: 15
