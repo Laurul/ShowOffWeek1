@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-
+using UnityEngine.UI;
 public class MoveTimerBar : MonoBehaviour
 {
-   [SerializeField] private GameObject timerBar;
+   [SerializeField] private Image timerBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,10 +11,13 @@ public class MoveTimerBar : MonoBehaviour
 
     public void SetSize(float normalizedSize)
     {
-        timerBar.transform.localScale = new Vector3(normalizedSize, 1f);
+        //timerBar.transform.localScale = new Vector3(normalizedSize, 1f);
+        timerBar.fillAmount = normalizedSize;
+
     }
     public float GetXSize()
     {
         return timerBar.transform.localScale.x;
     }
+
 }
