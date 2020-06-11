@@ -36,10 +36,13 @@ public class MoveObjectsForward : MonoBehaviour
             Vector3 mouse = Input.mousePosition;
             Ray castPoint = Camera.main.ScreenPointToRay(new Vector3(Lean.Touch.LeanTouch.Fingers[0].ScreenPosition.x, Lean.Touch.LeanTouch.Fingers[0].ScreenPosition.y,0));
             RaycastHit hit;
-            if (Physics.Raycast(castPoint, out hit, Mathf.Infinity))
+            if (Physics.Raycast(castPoint, out hit))
             {
-                if (hit.transform.tag == "water" || hit.transform.tag == "biomass" )//|| hit.transform.tag == "batery")
-                    hit.transform.position = Vector3.MoveTowards(transform.position,hit.point,Time.deltaTime*20);// new Vector3( hit.point.x,hit.point.y,-1);
+                if (hit.transform.tag == "water" || hit.transform.tag == "biomass") {
+                    print(Lean.Touch.LeanTouch.Fingers[0].ScreenPosition);
+                    hit.transform.position = Vector3.MoveTowards(transform.position, hit.point, Time.deltaTime * 20);
+                }//|| hit.transform.tag == "batery")
+                   // new Vector3( hit.point.x,hit.point.y,-1);
                
                 //if (hit.transform.position.z <= 0)
                 //{

@@ -23,7 +23,7 @@ public class EnergyBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        increasePerLevel = .0001f * submarineObject.transform.GetComponent<WaypointSystem>().moveSpeed;
+        increasePerLevel = .00005f * submarineObject.transform.GetComponent<WaypointSystem>().moveSpeed;
 
         if (bateryContainer.gameObject.transform.GetComponent<AcceptJunk>().returnCount() > 0)
         {

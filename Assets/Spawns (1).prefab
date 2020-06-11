@@ -48,6 +48,8 @@ MonoBehaviour:
   objectsToSpawn:
   - {fileID: 6422847007328520656, guid: 6999adebe4e01d24f9703a656d3f7e23, type: 3}
   - {fileID: 6189207130202456721, guid: c5e64bbed2f0b3548b585d66ebdcb75e, type: 3}
+  - {fileID: 7815253382897829767, guid: 2f6be7478e792cf4b8bb4fb65e70f72d, type: 3}
+  - {fileID: 444429305564668171, guid: fd1c044ca499a154593af26a6914f306, type: 3}
   sphere: {fileID: 0}
 --- !u!1 &1005585201625597153
 GameObject:

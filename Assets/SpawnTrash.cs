@@ -7,7 +7,7 @@ public class SpawnTrash : MonoBehaviour
     List<GameObject> spawnPoints;
     List<GameObject> chunks;
     [SerializeField] List<GameObject> objectsToSpawn;
-    [SerializeField] GameObject sphere;
+  //  [SerializeField] GameObject sphere;
     int i = 1;
 
     int posX=3;
@@ -19,7 +19,7 @@ public class SpawnTrash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+     //   sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class SpawnTrash : MonoBehaviour
         {
             //SpawnObj();
             
-            sphere.transform.localScale = new Vector3(i+0.1f, i + 0.1f, i + 0.1f);
+           // sphere.transform.localScale = new Vector3(i+0.1f, i + 0.1f, i + 0.1f);
             i++;
 
             for(int i = 0; i < 6; i++)
@@ -46,7 +46,7 @@ public class SpawnTrash : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+           // sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             i = 1;
         }
 

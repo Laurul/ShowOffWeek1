@@ -15,17 +15,17 @@ EditorBuildSettings:
     path: Assets/TutorialScreen.unity
     guid: 65dbf5b4afd1d0143bfd4002a2e805a2
   - enabled: 1
-    path: Assets/Scenes/levelTest2.unity
-    guid: 866df8e0ebcd7624692a175c17c6e6b5
+    path: Assets/Scenes/leveldesign.unity
+    guid: 800a57322d6ae442a9f1de2e70764ad7
   - enabled: 1
     path: Assets/Scenes/HighScorePrototype.unity
     guid: 127a7be5bc2965844b0d13f5b0d1a213
   - enabled: 0
+    path: Assets/Scenes/levelTest2.unity
+    guid: 866df8e0ebcd7624692a175c17c6e6b5
+  - enabled: 0
     path: Assets/Scenes/End.unity
     guid: b2fc8263474feb045ad3ffe3bbad424c
-  - enabled: 0
-    path: Assets/Scenes/leveldesign.unity
-    guid: 800a57322d6ae442a9f1de2e70764ad7
   - enabled: 0
     path: Assets/Scenes/ScoreScreen.unity
     guid: c1a78638462737442994b15813f51ffe
