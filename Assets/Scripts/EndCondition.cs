@@ -7,6 +7,7 @@ public class EndCondition : MonoBehaviour
 {
     [SerializeField] private GameObject fuelLeft;
     [SerializeField] private GameObject scoreObject;
+    
     public int scoreEnd;
     entry en;
     // Start is called before the first frame update
