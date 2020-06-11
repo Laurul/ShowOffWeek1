@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/NameScreen.unity
     guid: dc0015e6f57584c4bbf6a7b02300080d
   - enabled: 1
-    path: Assets/Scenes/FirstPersonPerspective.unity
-    guid: 16ee95e932c76144a87e6c0dfb6585c9
+    path: Assets/Scenes/leveldesign.unity
+    guid: 800a57322d6ae442a9f1de2e70764ad7
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: b2fc8263474feb045ad3ffe3bbad424c
+  - enabled: 0
+    path: Assets/Scenes/FirstPersonPerspective.unity
+    guid: 16ee95e932c76144a87e6c0dfb6585c9
   - enabled: 0
     path: Assets/Scenes/ScoreScreen.unity
     guid: c1a78638462737442994b15813f51ffe

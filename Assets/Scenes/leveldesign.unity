@@ -49889,7 +49889,6 @@ GameObject:
   - component: {fileID: 1331607932}
   - component: {fileID: 1331607934}
   - component: {fileID: 1331607933}
-  - component: {fileID: 1331607935}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -49937,10 +49936,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: acf13435e4e1b4fbf95ac3451c145229, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -49954,25 +49953,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331607931}
   m_CullTransparentMesh: 0
---- !u!114 &1331607935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331607931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b32768785b55abc4d819aa0b1d40ae08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bar: {fileID: 0}
-  bateryContainer: {fileID: 0}
-  barMeter: 1
-  spawnTimer: 0.3
-  ennergyAddAmmount: 100
-  submarineObject: {fileID: 0}
-  speedSlider: {fileID: 0}
 --- !u!1001 &1332765321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74034,7 +74014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0723abdbdc09504e847ed7bcd81086f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerBar: {fileID: 7908914492992583283}
+  timerBar: {fileID: 1331607933}
 --- !u!4 &849810113191402628
 Transform:
   m_ObjectHideFlags: 0
