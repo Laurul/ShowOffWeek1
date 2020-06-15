@@ -12,6 +12,7 @@ TagManager:
   - batery
   - Submarine
   - boundry
+  - aquarium
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - 
   - IgnoreAlex
   - Submarine
-  - 
+  - Particle
   - 
   - 
   - 
@@ -46,6 +47,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: forground
+    uniqueID: 1590210697
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 1805034553
+    locked: 0
+  - name: particles
+    uniqueID: 2657029613
     locked: 0
