@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject finish;
     [SerializeField] NavMeshAgent player;
-    
+    [SerializeField] GameObject sub;
+    Vector3 currentRotation;
 
     [SerializeField] [Range(0f, 3f)] float lerpTime;
     Quaternion rot;
@@ -21,16 +22,27 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, rot, lerpTime * Time.deltaTime);
+        sub.transform.position =new Vector3(this.transform.position.x, this.transform.position.y+5, this.transform.position.z) ;
         //transform.rotation = rot;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        rot = other.transform.rotation;
-       // print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-        desiredRotation = new Vector3(other.transform.eulerAngles.x, other.transform.eulerAngles.y, other.transform.eulerAngles.z);
-        print(desiredRotation);
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    rot = other.transform.rotation;
+    //   // print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    //    desiredRotation = new Vector3(other.transform.eulerAngles.x, other.transform.eulerAngles.y, other.transform.eulerAngles.z);
+    //    print(desiredRotation);
+    //}
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "navmesh")
+    //    {
+    //        //currentRotation = transform.eulerAngles;
+    //        //currentRotation.x = Mathf.Lerp(currentRotation.x, collision.gameObject.transform.eulerAngles.x, Time.deltaTime * 1.0f);
+    //        sub.transform.eulerAngles = collision.gameObject.transform.eulerAngles;
+    //    }
+
+    //}
 
 }

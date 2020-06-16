@@ -3,6 +3,7 @@ using UnityEngine.UI;
 public class MoveTimerBar : MonoBehaviour
 {
    [SerializeField] private Image timerBar;
+    Vector3 currentRotation;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,11 @@ public class MoveTimerBar : MonoBehaviour
     {
         return timerBar.transform.localScale.x;
     }
+    private void Update()
+    {
+        
+    }
+
+   
 
 }

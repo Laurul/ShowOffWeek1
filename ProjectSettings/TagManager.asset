@@ -12,6 +12,7 @@ TagManager:
   - batery
   - Submarine
   - boundry
+  - navmesh
   layers:
   - Default
   - TransparentFX
