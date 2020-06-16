@@ -375,6 +375,24 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: TutorialScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 2957317080340346545, guid: 501948d12f2ef4826b08a69ab2508dfa,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d9d0c5ba8b4ea4729b01bcffc04b56cc,
+        type: 3}
+    - target: {fileID: 2957317080340346546, guid: 501948d12f2ef4826b08a69ab2508dfa,
+        type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c7e2d06531cbb4451af48c17dce24920,
+        type: 3}
+    - target: {fileID: 2957317080340346546, guid: 501948d12f2ef4826b08a69ab2508dfa,
+        type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c7e2d06531cbb4451af48c17dce24920,
+        type: 3}
     - target: {fileID: 2957317080340346547, guid: 501948d12f2ef4826b08a69ab2508dfa,
         type: 3}
       propertyPath: m_AnchoredPosition.y
