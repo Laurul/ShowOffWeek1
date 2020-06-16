@@ -61,7 +61,7 @@ public class FishBehviour : MonoBehaviour
             timeUp = timerLeft;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, pos2, speed * Time.deltaTime);
         // transform.position = Vector3.MoveTowards(transform.position, nextPos,0.02f * Time.deltaTime);
 
 
@@ -79,7 +79,7 @@ public class FishBehviour : MonoBehaviour
         else if (roll ==1)
         { fux = Mathf.Cos(x ) *Random.Range(0,3) ; }
 
-        nextPos = new Vector3(actualPosition.x-Random.Range(1.5f,3f), fux, x);
+        nextPos = new Vector3(x, fux,0);
        // Debug.Log("FUX: " + fux);
 
     }

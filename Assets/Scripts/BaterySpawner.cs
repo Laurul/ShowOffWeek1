@@ -11,7 +11,7 @@ public class BaterySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        this.transform.rotation = this.transform.parent.transform.rotation;
     }
 
     // Update is called once per frame
@@ -25,6 +25,7 @@ public class BaterySpawner : MonoBehaviour
            // bateryClone.transform.position = new Vector3(bateryClone.transform.position.x, bateryClone.transform.position.y, container.transform.position.z);
            
            Destroy(bateryClone,70f);
+            bateryClone.transform.parent = transform;
             Rigidbody rb = bateryClone.GetComponent<Rigidbody>();
            rb.AddForce(-transform.up*6);
             bateryClone.transform.parent = transform;
