@@ -1,6 +1,4 @@
-﻿
-
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FishBehviour : MonoBehaviour
 {
@@ -14,16 +12,14 @@ public class FishBehviour : MonoBehaviour
     [SerializeField] private float timerLeft = 1f;
     [SerializeField] private GameObject aquarium;
     float timeDown = 1f;
-    [SerializeField]private GameObject player;
+    private GameObject player;
     private Quaternion facing;
 
     private int roll;
     [SerializeField] private float speed = 1f;
     // Start is called before the first frame update
-    
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").gameObject;
         Destroy(this.gameObject, 20f);
         facing = transform.rotation;
         aquarium = this.transform.parent.gameObject;
@@ -34,7 +30,7 @@ public class FishBehviour : MonoBehaviour
         roll = Random.Range(0, 2);
         CalculateTrajectory(transform.position);
         pos2 = nextPos;
-       
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
         // transform.LookAt(player.transform);
     }
 
@@ -47,7 +43,7 @@ public class FishBehviour : MonoBehaviour
 
         if (this.transform.position == destination) Destroy(this.gameObject);
 
-       //transform.LookAt(player.transform);
+        this.transform.GetChild(0).transform.LookAt(player.transform);
 
 
         timeUp -= Time.deltaTime;
