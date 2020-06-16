@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 5351723858860629722}
   - component: {fileID: 7114875183609083584}
   - component: {fileID: -1520173175187515523}
-  - component: {fileID: -2376970339939999345}
   - component: {fileID: -8666797169162536858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Algae
   m_TagString: water
   m_Icon: {fileID: 0}
@@ -32,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6422847007328520656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1f57f6824650dbb4290ca80bf64ae7dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3913c7139565ba41833eda64a533a86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,7 +114,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &7114875183609083584
 MonoBehaviour:
@@ -167,20 +166,6 @@ MonoBehaviour:
   Dampening: -1
   Inertia: 0
   remainingTranslation: {x: 0, y: 0, z: 0}
---- !u!114 &-2376970339939999345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422847007328520656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d931020ba3923b94398367408b75178d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moving: 0
-  leanSelectable: {fileID: 7114875183609083584}
 --- !u!82 &-8666797169162536858
 AudioSource:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class WaypointSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        this.transform.rotation = waypoints[0].transform.rotation;
         speedSlider.GetComponent<Slider>().value=1;
         transform.position = waypoints[waypointIndex].transform.position;
         moveSpeed = speedSlider.GetComponent<Slider>().value;

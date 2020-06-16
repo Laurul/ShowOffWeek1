@@ -42,7 +42,7 @@ public class FishSpawner : MonoBehaviour
         for (int i = 0; i < nrFishess; i++)
         {
             int posI1 = Random.Range(0, 6);
-            GameObject fishObjects= Instantiate(fishPrefab, rightSpawnPoints[posI1].transform.position  , rightSpawnPoints[posI1].transform.rotation,this.transform) as GameObject;
+            GameObject fishObjects= Instantiate(fishPrefab, rightSpawnPoints[posI1].gameObject.transform.position  , rightSpawnPoints[posI1].gameObject.transform.rotation,this.transform) as GameObject;
            
            int posI2 = Random.Range(0, 6);
           
