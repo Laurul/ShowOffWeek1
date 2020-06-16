@@ -35,7 +35,7 @@ public class UpdateScore : MonoBehaviour
             }
 
         }
-        scoreText.text = "Score: " + score;
+        scoreText.text =  score.ToString();
     }
     public void AddScore(int value)
     {

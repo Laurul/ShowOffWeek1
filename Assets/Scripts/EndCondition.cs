@@ -29,6 +29,8 @@ public class EndCondition : MonoBehaviour
                 SceneManager.LoadScene("HighScorePrototype");
                 scoreEnd = scoreObject.transform.gameObject.GetComponent<UpdateScore>().score;
             }
+           
+           
         }
 
 
