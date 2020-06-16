@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.08018869, g: 0.11766664, b: 1, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.3037113, g: 0.7601212, b: 0.8584906, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.05
+  m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.014017441, g: 0.325298, b: 0.5943396, a: 1}
