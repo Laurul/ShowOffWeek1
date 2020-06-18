@@ -1151,7 +1151,7 @@ MonoBehaviour:
   objectToSpwan: {fileID: 6189207130202456721, guid: c5e64bbed2f0b3548b585d66ebdcb75e,
     type: 3}
   container: {fileID: 34094278}
-  countDown: 7
+  countDown: 6
 --- !u!65 &34094281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21702,7 +21702,7 @@ MonoBehaviour:
   objectToSpwan: {fileID: 6422847007328520656, guid: 6999adebe4e01d24f9703a656d3f7e23,
     type: 3}
   container: {fileID: 755795571}
-  countDown: 9
+  countDown: 8
 --- !u!65 &755795574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43355,7 +43355,7 @@ MonoBehaviour:
   objectToSpwan: {fileID: 5670026913400627541, guid: d3b5ce51bdeff504c80dcdfcdaa035ea,
     type: 3}
   container: {fileID: 228473914}
-  countDown: 6
+  countDown: 10
 --- !u!65 &1153857104
 BoxCollider:
   m_ObjectHideFlags: 0
