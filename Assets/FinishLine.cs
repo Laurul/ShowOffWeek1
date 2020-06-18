@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class FinishLine : MonoBehaviour
 {
     // Start is called before the first frame update
+  [SerializeField]  Rail playerRail;
     void Start()
     {
         
@@ -18,9 +19,16 @@ public class FinishLine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "finish")
+        if (other.tag == "finish"&&other.name=="END")
         {
+            playerRail.ChangeFinish();
+            //SceneManager.LoadScene("HighScorePrototype");
+        }
+        if (other.tag == "finish" && other.name != "END")
+        {
+           
             SceneManager.LoadScene("HighScorePrototype");
         }
+        
     }
 }
