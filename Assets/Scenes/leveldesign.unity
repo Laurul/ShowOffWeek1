@@ -34328,7 +34328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1663205090}
-  m_RootOrder: 8
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 2.991, y: -9.721, z: -0.204}
 --- !u!108 &1063220049
 Light:
@@ -41304,7 +41304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1663205090}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1105778099
 AudioSource:
@@ -60184,7 +60184,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 1663205090}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1218982551
 Rigidbody:
@@ -85380,7 +85380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1663205090}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 2.998, y: 5.498, z: 0}
 --- !u!108 &1857962687
 Light:
@@ -92082,7 +92082,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1663205090}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2052382129
 MonoBehaviour:
@@ -95344,6 +95344,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256710985226010078, guid: 6cbb13ebd7e95ef4492e2494d980d4b3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3256710985226010079, guid: 6cbb13ebd7e95ef4492e2494d980d4b3,
         type: 3}

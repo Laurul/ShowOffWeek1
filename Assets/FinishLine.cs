@@ -27,7 +27,7 @@ public class FinishLine : MonoBehaviour
         if (other.tag == "finish" && other.name != "END")
         {
            
-            SceneManager.LoadScene("HighScorePrototype");
+            SceneManager.LoadScene(4);
         }
         
     }
