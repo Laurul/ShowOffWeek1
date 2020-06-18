@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: -0.2
   contrast:
     m_OverrideState: 1
     m_Value: -1
@@ -24,7 +24,7 @@ MonoBehaviour:
     max: 100
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.6494749, g: 0.96152884, b: 0.990566, a: 1}
+    m_Value: {r: 0.7764706, g: 0.9372549, b: 0.972549, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
@@ -35,7 +35,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 23
     min: -100
     max: 100
 --- !u!114 &-6867839423409438509
@@ -54,13 +54,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.24554999, g: 0.29148793, b: 0.5849056, a: 1}
+    m_Value: {r: 0.13333334, g: 0.19215687, b: 0.34117648, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 0.12936099, g: 0.15600671, b: 0.1792453, a: 1}
+    m_Value: {r: 0.7137255, g: 0.81960785, b: 0.9137255, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 1, b: 0.96257186, a: 1}
+    m_Value: {r: 0.5568628, g: 0.5568628, b: 0.5568628, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -94,17 +94,17 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.519
+    m_Value: 0.117
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.212
+    m_Value: 0.17
     min: 0.01
     max: 1
   rounded:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
 --- !u!114 &-3611959919867639825
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
   m_Name: LiftGammaGain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   lift:
     m_OverrideState: 1
@@ -144,12 +144,12 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: -13
+    m_Value: -8.2
     min: -100
     max: 100
   tint:
     m_OverrideState: 1
-    m_Value: 49
+    m_Value: 36.2
     min: -100
     max: 100
 --- !u!114 &11400000
