@@ -15,18 +15,22 @@ public class AnimationOvveride : MonoBehaviour
 
    public void SetUp()
     {
-        direction = 1;
-        
-        leverAnim.SetBool("up", true);
-        leverAnim.Play("Lever_up");
+        if(direction<5)
+        direction++;
+        leverAnim.SetInteger("count", direction);
+       
+       // leverAnim.SetBool("up", true);
+       // leverAnim.Play("Lever_up");
     }
 
     public void SetDown()
     {
-        direction = -1;
+        if(direction>0)
+        direction --;
+        leverAnim.SetInteger("count", direction);
         // leverAnim.SetBool("down",true);
-        leverAnim.SetBool("up", false);
-        leverAnim.Play("Lever_down");
+        // leverAnim.SetBool("up", false);
+        // leverAnim.Play("Lever_down");
         // leverAnim.SetBool("idle", false);
     }
 
@@ -36,7 +40,7 @@ public class AnimationOvveride : MonoBehaviour
       
     }
 
-    public void ResetDir()
+    public void SetDir()
     {
         direction = 0;
     }

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/leveldesign.unity
     guid: 518a6f7f73f05a64ebf9f0bb7c2e9586
   - enabled: 1
+    path: Assets/Scenes/endScene.unity
+    guid: f0df0d66488b62a42986a284ba3b1300
+  - enabled: 1
     path: Assets/Scenes/HighScorePrototype.unity
     guid: 127a7be5bc2965844b0d13f5b0d1a213
   m_configObjects: {}

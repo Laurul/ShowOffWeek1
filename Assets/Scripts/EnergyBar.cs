@@ -33,42 +33,30 @@ public class EnergyBar : MonoBehaviour
     void Update()
     {
         increasePerLevel = value * navAgent.speed;
-        if (leverAnim.ReturnDir() != 0)
+
+        switch (leverAnim.ReturnDir())
         {
-            if (leverAnim.ReturnDir() == 1)
-            {
-                up = true;
-                down = false;
-            }
-            else
-            {
-                up = false;
-                down = true;
-            }
+            case 1:
+                navAgent.speed= 10;
+                break;
+            case 2:
+                navAgent.speed = 15;
+                break;   
+            case 3:
+                navAgent.speed = 20;
+                break;
+            case 4:
+                navAgent.speed = 25;
+                break; 
+            case 5:
+                navAgent.speed = 30;
+                break;
+
+            default:
+                navAgent.speed = 5;
+                break;
         }
-        //else
-        //{
 
-        //    //// submarineObject.transform.GetComponent<WaypointSystem>().moveSpeed;
-        //}
-
-
-        if (up == true && navAgent.speed < 25)
-        {
-            leverAnim.ResetDir();
-            up = false;
-            value = .00003f;
-            navAgent.speed += 5;
-
-        }
-        if (down && navAgent.speed > 5)
-        {
-            leverAnim.ResetDir();
-            down = false;
-            value = .00001f;
-            navAgent.speed -= 5;
-
-        }
 
 
 

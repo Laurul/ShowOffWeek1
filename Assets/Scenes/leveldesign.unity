@@ -20754,7 +20754,7 @@ PrefabInstance:
     - target: {fileID: 5030129446953997273, guid: ba258accbfcd7da4dbdeea84991944a2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5030129446953997273, guid: ba258accbfcd7da4dbdeea84991944a2,
         type: 3}
@@ -27080,6 +27080,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7908914493772565821}
     m_Modifications:
+    - target: {fileID: 1443823981744790868, guid: c729d2ab5224a2f4c8cc2c9e92a57160,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: da7b1b378d7435f4086c81c3d5134315, type: 2}
     - target: {fileID: 1443823981744790869, guid: c729d2ab5224a2f4c8cc2c9e92a57160,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27118,7 +27123,7 @@ PrefabInstance:
     - target: {fileID: 1443823981744790869, guid: c729d2ab5224a2f4c8cc2c9e92a57160,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1443823981744790869, guid: c729d2ab5224a2f4c8cc2c9e92a57160,
         type: 3}
@@ -27153,6 +27158,21 @@ PrefabInstance:
     - target: {fileID: 1443823981744790875, guid: c729d2ab5224a2f4c8cc2c9e92a57160,
         type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443823981744790875, guid: c729d2ab5224a2f4c8cc2c9e92a57160,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443823981744790875, guid: c729d2ab5224a2f4c8cc2c9e92a57160,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443823981744790875, guid: c729d2ab5224a2f4c8cc2c9e92a57160,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -35738,7 +35758,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1590210697
-  m_SortingLayer: 0
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -66446,7 +66466,7 @@ Transform:
   m_LocalScale: {x: 52.85065, y: 52.850662, z: 52.850647}
   m_Children: []
   m_Father: {fileID: 7908914493772565821}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 9.655, y: -42.2, z: 0.823}
 --- !u!1001 &1390837163
 PrefabInstance:
@@ -96148,9 +96168,9 @@ RectTransform:
   - {fileID: 1067937615}
   - {fileID: 849575499}
   - {fileID: 1075827418}
-  - {fileID: 1720689872}
   - {fileID: 896889072}
   - {fileID: 1390596703}
+  - {fileID: 1720689872}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
