@@ -8,18 +8,20 @@ public class BaterySpawner : MonoBehaviour
     [SerializeField] GameObject container;
     [SerializeField] float countDown = 5.0f;
     GameObject[] g;
+    float timer;
     // Start is called before the first frame update
     void Start()
     {
         this.transform.rotation = this.transform.parent.transform.rotation;
+	timer=countDown;
     }
 
     // Update is called once per frame
     void Update()
     {
       
-        countDown -= Time.deltaTime;
-        if (countDown <= 0f)
+        timer -= Time.deltaTime;
+        if (timer <= 0f)
         {
             GameObject bateryClone =Instantiate(objectToSpwan, new Vector3(this.transform.position.x+ Random.Range(-1f, 1f), this.transform.position.y, this.transform.position.z), this.transform.rotation) as GameObject;
            // bateryClone.transform.position = new Vector3(bateryClone.transform.position.x, bateryClone.transform.position.y, container.transform.position.z);
@@ -30,7 +32,7 @@ public class BaterySpawner : MonoBehaviour
            rb.AddForce(-transform.up*6);
             bateryClone.transform.parent = transform;
           
-            countDown = 5.0f;
+            timer = countDown;
         }
 
         

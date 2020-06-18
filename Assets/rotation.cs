@@ -35,11 +35,11 @@ public class rotation : MonoBehaviour
             //Vector3 currentRotation = objToRotate.transform.eulerAngles;
             //currentRotation.x = Mathf.Lerp(currentRotation.x, other.gameObject.transform.eulerAngles.x, Time.deltaTime * 1.0f);
             // objToRotate.transform.rotation = Quaternion.Slerp(objToRotate.transform.rotation, other.gameObject.transform.rotation, Time.deltaTime * 1f);
-          
-            target.transform.position = other.gameObject.transform.position;
-          
-            target.transform.eulerAngles = other.gameObject.transform.eulerAngles;
-            target.transform.position = new Vector3(target.transform.position.x, target.transform.position.y + 2, target.transform.position.z);
+
+           // objToRotate.transform.transform.position = other.gameObject.transform.position;
+
+            objToRotate.transform.transform.eulerAngles = other.gameObject.transform.eulerAngles;
+           // objToRotate.transform.transform.position = new Vector3(objToRotate.transform.position.x, target.transform.position.y + 2, target.transform.position.z);
         }
 
     }
@@ -47,7 +47,7 @@ public class rotation : MonoBehaviour
     private void Update()
     {
       //  Align();
-         objToRotate.transform.LookAt(target.transform);
+        // objToRotate.transform.LookAt(target.transform);
     }
 
     private void Align()

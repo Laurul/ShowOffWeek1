@@ -22,7 +22,9 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        sub.transform.position =new Vector3(this.transform.position.x, this.transform.position.y+5, this.transform.position.z) ;
+       // sub.transform.position = this.transform.position;
+       
+
         //transform.rotation = rot;
     }
 
