@@ -37,27 +37,31 @@ public class EnergyBar : MonoBehaviour
         switch (leverAnim.ReturnDir())
         {
             case 1:
+                value = .00001f;
                 navAgent.speed= 10;
                 break;
             case 2:
+                value = .000015f;
                 navAgent.speed = 15;
                 break;   
             case 3:
+                value = .00002f;
                 navAgent.speed = 20;
                 break;
             case 4:
+                value = .000025f;
                 navAgent.speed = 25;
                 break; 
             case 5:
+                value = .00003f;
                 navAgent.speed = 30;
                 break;
 
             default:
+                value = .00001f;
                 navAgent.speed = 5;
                 break;
         }
-
-
 
 
         if (bateryContainer.gameObject.transform.GetComponent<AcceptJunk>().returnCount() > 0)
