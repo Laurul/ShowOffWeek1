@@ -309,19 +309,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteState.m_HighlightedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: aafb0e5b780f846b7b2e594a1d1ec7e2,
+      objectReference: {fileID: 21300000, guid: ef6915bb2b4e84dffbfa6b45f786357c,
         type: 3}
     - target: {fileID: 2463002282865565158, guid: 5d4fe987f6ba943ca991351e6e15bfc5,
         type: 3}
       propertyPath: m_SpriteState.m_PressedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: aafb0e5b780f846b7b2e594a1d1ec7e2,
+      objectReference: {fileID: 21300000, guid: ef6915bb2b4e84dffbfa6b45f786357c,
         type: 3}
     - target: {fileID: 2463002282865565159, guid: 5d4fe987f6ba943ca991351e6e15bfc5,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0be089de64d274661a7772609d76352b,
+      objectReference: {fileID: 21300000, guid: 58d37d7799e5041ffbfe43ff1eb5fc14,
         type: 3}
     - target: {fileID: 2463002283274575732, guid: 5d4fe987f6ba943ca991351e6e15bfc5,
         type: 3}
