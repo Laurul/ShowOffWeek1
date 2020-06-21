@@ -24,11 +24,11 @@ public class FishBehviour : MonoBehaviour
         facing = transform.rotation;
         aquarium = this.transform.parent.gameObject;
         destination = pos2;
-        initialPosition = this.transform.position;
+        initialPosition = this.transform.localPosition;
         timeUp = timerLeft;
         // timeDown = timerLeft;
         roll = Random.Range(0, 2);
-        CalculateTrajectory(transform.position);
+        CalculateTrajectory(transform.localPosition);
         pos2 = nextPos;
         player = GameObject.FindGameObjectWithTag("Player").gameObject;
         // transform.LookAt(player.transform);
@@ -41,19 +41,19 @@ public class FishBehviour : MonoBehaviour
        // rotation *= facing;
        // transform.rotation = rotation;
 
-        if (this.transform.position == destination) Destroy(this.gameObject);
+        if (this.transform.localPosition == destination) Destroy(this.gameObject);
 
         this.transform.GetChild(0).transform.LookAt(player.transform);
 
 
         timeUp -= Time.deltaTime;
         //Debug.Log(timeUp);
-        if (timeUp < 0||this.transform.position==pos2)
+        if (timeUp < 0||this.transform.localPosition==pos2)
         {
-            Debug.Log(transform.position+"   "+destination);
+           
             
                 roll = Random.Range(0, 3);
-                CalculateTrajectory(transform.position);
+                CalculateTrajectory(transform.localPosition);
                
                 pos2 = nextPos;
             
@@ -61,7 +61,7 @@ public class FishBehviour : MonoBehaviour
             timeUp = timerLeft;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, pos2, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.localPosition, pos2, speed * Time.deltaTime);
         // transform.position = Vector3.MoveTowards(transform.position, nextPos,0.02f * Time.deltaTime);
 
 
@@ -79,7 +79,7 @@ public class FishBehviour : MonoBehaviour
         else if (roll ==1)
         { fux = Mathf.Cos(x ) *Random.Range(0,3) ; }
 
-        nextPos = new Vector3(x, fux,0);
+        nextPos = new Vector3(transform.localPosition.x, fux,x);
        // Debug.Log("FUX: " + fux);
 
     }

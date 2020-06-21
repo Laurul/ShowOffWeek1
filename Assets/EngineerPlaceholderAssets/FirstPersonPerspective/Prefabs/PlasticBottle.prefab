@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6189207130202456724}
   - component: {fileID: -3268793085662634816}
   - component: {fileID: 1765768076833421327}
+  - component: {fileID: -7664849535720427063}
   m_Layer: 8
   m_Name: PlasticBottle
   m_TagString: water
@@ -306,3 +307,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7664849535720427063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189207130202456721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9cf54125e9c384d9e27676e5e8908f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leanSelectable: {fileID: 6189207130202456725}
