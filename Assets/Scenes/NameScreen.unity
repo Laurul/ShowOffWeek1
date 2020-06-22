@@ -1527,6 +1527,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2976170538234724761, guid: 036e09afdc0375142970849e60343b77,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976170540199943196, guid: 036e09afdc0375142970849e60343b77,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4131359245590419091, guid: 036e09afdc0375142970849e60343b77,
         type: 3}
       propertyPath: m_Name
@@ -1535,6 +1545,16 @@ PrefabInstance:
     - target: {fileID: 4131359245590419091, guid: 036e09afdc0375142970849e60343b77,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241840178513439871, guid: 036e09afdc0375142970849e60343b77,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414852517646218374, guid: 036e09afdc0375142970849e60343b77,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
