@@ -23,7 +23,7 @@ public class Rail : MonoBehaviour
         if (finish == false)
         {
             translatedPos = transform.position + offsetCamera;
-            UnityEngine.Vector3 smoothPosition = UnityEngine.Vector3.Lerp(translatedPos, target.position, smoothing);
+            UnityEngine.Vector3 smoothPosition = UnityEngine.Vector3.Lerp(translatedPos, target.position,Time.deltaTime/smoothing);
             transform.position = smoothPosition;
             transform.LookAt(target);
         }

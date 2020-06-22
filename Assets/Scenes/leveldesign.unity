@@ -99753,7 +99753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 89716129}
-  smoothing: 0.2
+  smoothing: 0.25
   finishTarget: {fileID: 1114543824}
   offsetCamera: {x: 0, y: 0, z: 0}
 --- !u!65 &3256710984333978392
