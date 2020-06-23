@@ -1838,8 +1838,9 @@ GameObject:
   - component: {fileID: 769682496}
   - component: {fileID: 769682495}
   - component: {fileID: 769682497}
+  - component: {fileID: 769682498}
   m_Layer: 0
-  m_Name: huge-75
+  m_Name: QUIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1896,20 +1897,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &769682496
-Transform:
+--- !u!224 &769682496
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769682494}
   m_LocalRotation: {x: 0.124509, y: 0.0548555, z: -0.0027117422, w: 0.99069726}
-  m_LocalPosition: {x: 21.35, y: -23.87, z: 77.84}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
+  m_LocalPosition: {x: 0, y: 0, z: 77.84}
+  m_LocalScale: {x: 0.080000006, y: 0.08, z: 0.08}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_Father: {fileID: 1079114197}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 14.3, y: 6.4, z: 0.49}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -938.65, y: -563.87}
+  m_SizeDelta: {x: 30.47, y: 29.3}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769682497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1928,7 +1934,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1941,7 +1947,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 601cb33761dcb4a678bf143ca917e3d1,
       type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 601cb33761dcb4a678bf143ca917e3d1, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 601cb33761dcb4a678bf143ca917e3d1, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1950,22 +1956,34 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 473288936}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 769682498}
+        m_TargetAssemblyTypeName: quitMenu, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &769682498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769682494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d242357c84ca6646b68b5b690097452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &775119443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2097,7 +2115,7 @@ RectTransform:
   m_Children:
   - {fileID: 473288935}
   m_Father: {fileID: 1079114197}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2451,6 +2469,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 769682496}
   - {fileID: 804545889}
   m_Father: {fileID: 0}
   m_RootOrder: 38
