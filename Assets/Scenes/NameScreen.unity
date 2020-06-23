@@ -478,6 +478,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2957317080220649394, guid: 501948d12f2ef4826b08a69ab2508dfa,
+        type: 3}
+      propertyPath: m_Text
+      value: Vul je naam hier in...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957317080220649394, guid: 501948d12f2ef4826b08a69ab2508dfa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957317080220649396, guid: 501948d12f2ef4826b08a69ab2508dfa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2957317080340346511, guid: 501948d12f2ef4826b08a69ab2508dfa,
         type: 3}
       propertyPath: sceneToLoad
@@ -1297,6 +1312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UsePipelineSettings: 1
+  m_lightCookieFalloff: 1
+  m_lightCookieColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!108 &1434245010
 Light:
   m_ObjectHideFlags: 0
@@ -1530,17 +1547,32 @@ PrefabInstance:
     - target: {fileID: 2976170538234724761, guid: 036e09afdc0375142970849e60343b77,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2976170538358775077, guid: 036e09afdc0375142970849e60343b77,
+        type: 3}
+      propertyPath: progressSlider
+      value: 
+      objectReference: {fileID: 1812286981}
     - target: {fileID: 2976170539040139177, guid: 036e09afdc0375142970849e60343b77,
         type: 3}
       propertyPath: m_Color.a
       value: 0.972549
       objectReference: {fileID: 0}
+    - target: {fileID: 2976170539328729403, guid: 036e09afdc0375142970849e60343b77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976170539562829122, guid: 036e09afdc0375142970849e60343b77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2976170540199943196, guid: 036e09afdc0375142970849e60343b77,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4131359245590419091, guid: 036e09afdc0375142970849e60343b77,
         type: 3}
@@ -1550,7 +1582,7 @@ PrefabInstance:
     - target: {fileID: 4131359245590419091, guid: 036e09afdc0375142970849e60343b77,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6241840178513439871, guid: 036e09afdc0375142970849e60343b77,
         type: 3}
@@ -1564,6 +1596,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 036e09afdc0375142970849e60343b77, type: 3}
+--- !u!114 &1812286981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 815118967670217879, guid: 036e09afdc0375142970849e60343b77,
+    type: 3}
+  m_PrefabInstance: {fileID: 1812286980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1946448731
 GameObject:
   m_ObjectHideFlags: 0

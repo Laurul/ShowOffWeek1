@@ -16,6 +16,7 @@ public class EnergyBar : MonoBehaviour
     [SerializeField] private GameObject submarineObject;
     [SerializeField] private NavMeshAgent navAgent;
     [SerializeField] private AnimationOvveride leverAnim;
+    
     bool up = false;
     bool down = false;
     float value;
@@ -37,24 +38,24 @@ public class EnergyBar : MonoBehaviour
         switch (leverAnim.ReturnDir())
         {
             case 1:
-                value = .00001f;
-                navAgent.speed= 10;
+                value = .000012f;
+                navAgent.speed= 7;
                 break;
             case 2:
-                value = .000015f;
-                navAgent.speed = 15;
+                value = .000013f;
+                navAgent.speed = 10;
                 break;   
             case 3:
-                value = .00002f;
-                navAgent.speed = 20;
+                value = .000017f;
+                navAgent.speed = 13;
                 break;
             case 4:
-                value = .000025f;
-                navAgent.speed = 25;
+                value = .00002f;
+                navAgent.speed = 16;
                 break; 
             case 5:
-                value = .00003f;
-                navAgent.speed = 30;
+                value = .000022f;
+                navAgent.speed = 20;
                 break;
 
             default:

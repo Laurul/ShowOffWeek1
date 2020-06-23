@@ -9,9 +9,10 @@ public class HighScoreTable : MonoBehaviour
     [SerializeField] private Transform entryContainer;
     [SerializeField] private Transform entryTemplate;
     [SerializeField] float offset = 10f;
+ 
     //List<ScoreEntry> highScoresEntries;
     List<Transform> highScoreTransformList;
-
+ 
     private void Awake()
     {
         highScoreTransformList = new List<Transform>();
@@ -80,12 +81,12 @@ public class HighScoreTable : MonoBehaviour
 
     private void CreateHighScoreEntry(ScoreEntry hishcoreEntry, Transform container, List<Transform> transformLists)
     {
+       
         Transform entry = Instantiate(entryTemplate, container);
         RectTransform entryRect = entry.GetComponent<RectTransform>();
-
+        
         entryRect.anchoredPosition = new Vector2(0, transformLists.Count * -offset);
         entry.gameObject.SetActive(true);
-
         int rank = transformLists.Count + 1;
         string rankString;
         switch (rank)
