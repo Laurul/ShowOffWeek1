@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6189207130202456724}
   - component: {fileID: -3268793085662634816}
   - component: {fileID: 1765768076833421327}
+  - component: {fileID: -3583707024271213911}
   m_Layer: 8
   m_Name: PlasticBottle
   m_TagString: water
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 392fa9d269f6eb44590e39f090f050c4, type: 3}
-  m_Color: {r: 0.4292453, g: 0.4715004, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1f57f6824650dbb4290ca80bf64ae7dc, type: 3}
+  m_Color: {r: 0.7837753, g: 0.79793394, b: 0.9716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -306,3 +307,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3583707024271213911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189207130202456721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9cf54125e9c384d9e27676e5e8908f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leanSelectable: {fileID: 6189207130202456725}
