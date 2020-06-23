@@ -7,10 +7,15 @@ public class AcceptJunk : MonoBehaviour
     [SerializeField] string _tag;
     int count = 0;
     bool collected = false;
+    AudioSource audioData;
+    [SerializeField] private AudioClip good;
+    [SerializeField] private AudioClip bad;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioData = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -25,7 +30,12 @@ public class AcceptJunk : MonoBehaviour
         {
             collected = true;
             count++;
-           
+            audioData.PlayOneShot(good);
+            Destroy(other.gameObject);
+        }
+        else
+        {
+            audioData.PlayOneShot(bad);
             Destroy(other.gameObject);
         }
         
