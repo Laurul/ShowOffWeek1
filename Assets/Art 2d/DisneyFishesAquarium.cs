@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DisneyFishesAquarium : MonoBehaviour
 {
-    public Transform target;
+    public GameObject target;
     public float speed;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,9 @@ public class DisneyFishesAquarium : MonoBehaviour
     void Update()
     {
         float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
+     
 
     }
+   
 }
