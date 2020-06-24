@@ -6,7 +6,8 @@ public class videSwitch : MonoBehaviour
 {
 
     VideoPlayer video;
-
+    string url;
+    [SerializeField] AudioSource audioSource;
     void Awake()
     {
         video = GetComponent<VideoPlayer>();
@@ -16,6 +17,16 @@ public class videSwitch : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (string.IsNullOrEmpty(url))
+        {
+            url = System.IO.Path.Combine(Application.streamingAssetsPath, "mv_ending");
+        }
+
+        video.url = url;
+        video.SetTargetAudioSource(0, audioSource);
+    }
 
     void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {
